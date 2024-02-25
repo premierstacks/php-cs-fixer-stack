@@ -1,0 +1,69 @@
+{
+  "name": "tomchochola/php-cs-fixer-config",
+  "description": "php-cs-fixer config",
+  "type": "library",
+  "keywords": [
+    "tomchochola",
+    "php-cs-fixer-config"
+  ],
+  "homepage": "https://github.com/tomchochola/php-cs-fixer-config",
+  "readme": "./README.md",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tomáš Chochola",
+      "email": "chocholatom1997@gmail.com",
+      "homepage": "https://github.com/tomchochola",
+      "role": "Author"
+    }
+  ],
+  "support": {
+    "email": "chocholatom1997@gmail.com",
+    "issues": "https://github.com/tomchochola/php-cs-fixer-config/issues",
+    "source": "https://github.com/tomchochola/php-cs-fixer-config.git",
+    "docs": "https://github.com/tomchochola/php-cs-fixer-config"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tomchochola"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "friendsofphp/php-cs-fixer": "dev-master"
+  },
+  "require-dev": {
+    "tomchochola/phpstan-config": "@dev",
+    "phpunit/phpunit": "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tomchochola\\PhpCsFixerConfig\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "./tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomchochola/phpstan-config.git"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "preferred-install": "dist",
+    "audit": {
+      "abandoned": "fail"
+    },
+    "optimize-autoloader": true,
+    "platform-check": true
+  }
+}
