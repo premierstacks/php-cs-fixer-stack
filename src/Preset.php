@@ -1,16 +1,18 @@
 <?php
 
 /**
- * This file is part of a software developed by Tomáš Chochola.
+ * Copyright © 2024+ Tomáš Chochola <chocholatom1997@gmail.com> - All Rights Reserved
  *
- * Copyright © 2024+ Tomáš Chochola <chocholatom1997@gmail.com>
+ * This software is the proprietary property of Tomáš Chochola and is protected by copyright laws.
+ * Despite its potential public availability, it remains proprietary and not free or open-source.
+ * A valid license is required for any use of the software.
  *
- * For the full copyright and license information, please view the
- * LICENSE.md file that was distributed with this source code, available
- * at the root of this repository.
+ * The complete license terms are detailed in the LICENSE.md file within the source code.
  *
- * GitHub Profile: https://github.com/tomchochola
- * Support & Sponsor: https://github.com/sponsors/tomchochola
+ * For license acquisition or inquiries, please contact Tomáš Chochola or visit the GitHub Sponsors page:
+ * - Email: chocholatom1997@gmail.com
+ * - GitHub: https://github.com/tomchochola
+ * - Sponsor & License: https://github.com/sponsors/tomchochola
  */
 
 declare(strict_types=1);

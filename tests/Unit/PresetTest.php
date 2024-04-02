@@ -17,23 +17,25 @@
 
 declare(strict_types=1);
 
-namespace Tomchochola\PhpCsFixerConfig;
+namespace Tests\Unit;
 
-use PhpCsFixer\Config;
-use PhpCsFixer\ConfigInterface;
-use PhpCsFixer\Finder;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Small;
+use PHPUnit\Framework\Attributes\Test;
+use Tomchochola\PhpCsFixerConfig\Preset;
 
-class ConfigFactory
+/**
+ * @internal
+ */
+#[Small]
+#[CoversClass(Preset::class)]
+class PresetTest extends TestCase
 {
-    /**
-     * @param array<string, array<string, mixed>|bool> $rules
-     */
-    public static function make(Finder $finder, array $rules): ConfigInterface
+    #[Test]
+    #[DoesNotPerformAssertions]
+    public function testMake(): void
     {
-        return (new Config())
-            ->setRiskyAllowed(true)
-            ->setLineEnding("\n")
-            ->setFinder($finder)
-            ->setRules($rules);
+        Preset::make(__DIR__, []);
     }
 }

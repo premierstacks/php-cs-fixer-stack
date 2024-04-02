@@ -17,23 +17,11 @@
 
 declare(strict_types=1);
 
-namespace Tomchochola\PhpCsFixerConfig;
+namespace Tests\Unit;
 
-use PhpCsFixer\Config;
-use PhpCsFixer\ConfigInterface;
-use PhpCsFixer\Finder;
+use PHPUnit\Framework\TestCase as VendorTestCase;
 
-class ConfigFactory
-{
-    /**
-     * @param array<string, array<string, mixed>|bool> $rules
-     */
-    public static function make(Finder $finder, array $rules): ConfigInterface
-    {
-        return (new Config())
-            ->setRiskyAllowed(true)
-            ->setLineEnding("\n")
-            ->setFinder($finder)
-            ->setRules($rules);
-    }
-}
+/**
+ * @internal
+ */
+abstract class TestCase extends VendorTestCase {}

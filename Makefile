@@ -13,7 +13,7 @@ MAKE_COMPOSER ?= ${MAKE_PHP} ${MAKE_COMPOSER_2_BIN}
 
 # Goals
 .PHONY: check
-check: stan lint audit test
+check: lint stan test audit
 
 .PHONY: audit
 audit: ./vendor ./composer.lock ./node_modules ./package-lock.json
@@ -73,11 +73,11 @@ testing: local
 
 .PHONY: development
 development: testing
-	${MAKE_COMPOSER} install -a --no-dev
-	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: staging
-staging: development
+staging:
+	${MAKE_COMPOSER} install -a --no-dev
+	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: production
 production: staging
