@@ -22,7 +22,7 @@ declare(strict_types=1);
 
 namespace Premierstacks\PhpCsFixerConfig\Configs;
 
-class Tomchochola
+class Premierstacks
 {
     /**
      * @return array<string, array<string, mixed>|bool>
