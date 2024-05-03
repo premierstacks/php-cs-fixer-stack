@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Tomchochola\PhpCsFixerConfig;
+namespace Premierstacks\PhpCsFixerConfig;
 
 use PhpCsFixer\Config;
 use PhpCsFixer\ConfigInterface;

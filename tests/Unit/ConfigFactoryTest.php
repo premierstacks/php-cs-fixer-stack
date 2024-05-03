@@ -27,7 +27,7 @@ use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use PhpCsFixer\Finder;
-use Tomchochola\PhpCsFixerConfig\ConfigFactory;
+use Premierstacks\PhpCsFixerConfig\ConfigFactory;
 
 /**
  * @internal

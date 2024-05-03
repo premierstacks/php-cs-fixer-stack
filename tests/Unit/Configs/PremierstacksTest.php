@@ -27,19 +27,19 @@ use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use Tests\Unit\TestCase;
-use Premierstacks\PhpCsFixerConfig\Configs\Recommended;
+use Premierstacks\PhpCsFixerConfig\Configs\Premierstacks;
 
 /**
  * @internal
  */
 #[Small]
-#[CoversClass(Recommended::class)]
-class RecommendedTest extends TestCase
+#[CoversClass(Premierstacks::class)]
+class PremierstacksTest extends TestCase
 {
     #[Test]
     #[DoesNotPerformAssertions]
     public function testConfig(): void
     {
-        Recommended::config();
+        Premierstacks::config();
     }
 }

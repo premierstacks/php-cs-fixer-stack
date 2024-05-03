@@ -27,7 +27,7 @@ use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use Tests\Unit\TestCase;
-use Tomchochola\PhpCsFixerConfig\Configs\Tomchochola;
+use Premierstacks\PhpCsFixerConfig\Configs\Tomchochola;
 
 /**
  * @internal

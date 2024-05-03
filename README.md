@@ -1,4 +1,4 @@
-# [PHP CS Fixer Config](https://github.com/tomchochola/php-cs-fixer-config) by [Tomáš Chochola](https://github.com/tomchochola)
+# [PHP CS Fixer Config](https://github.com/premierstacks/php-cs-fixer-config) by [Tomáš Chochola](https://github.com/tomchochola)
 
 Streamline PHP quality with our PHP CS Fixer Config: tailored rules and easy setup for top-tier code across your PHP projects. Ideal for swift, best-practice integration.
 
@@ -83,8 +83,8 @@ Add the following to your `composer.json`:
 ```json
 "repositories": [
     {
-        "type": "vcs",
-        "url": "https://github.com/tomchochola/php-cs-fixer-config.git"
+        "type": "git",
+        "url": "https://github.com/premierstacks/php-cs-fixer-config.git"
     }
 ]
 ```
@@ -92,7 +92,7 @@ Add the following to your `composer.json`:
 Then, execute:
 
 ```shell
-composer require --dev tomchochola/php-cs-fixer-config:@dev
+composer require --dev premierstacks/php-cs-fixer-config:@dev
 ```
 
 ### 3️⃣ Configuration
@@ -104,8 +104,8 @@ Set up your `.php-cs-fixer.php` as follows:
 
 declare(strict_types=1);
 
-use Tomchochola\PhpCsFixerConfig\Configs\Recommended;
-use Tomchochola\PhpCsFixerConfig\Preset;
+use Premierstacks\PhpCsFixerConfig\Configs\Recommended;
+use Premierstacks\PhpCsFixerConfig\Preset;
 
 return Preset::make(__DIR__, Recommended::config());
 ```

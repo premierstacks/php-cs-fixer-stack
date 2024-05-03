@@ -1,12 +1,12 @@
 {
-  "name": "tomchochola/php-cs-fixer-config",
+  "name": "premierstacks/php-cs-fixer-config",
   "description": "php-cs-fixer config",
   "type": "library",
   "keywords": [
-    "tomchochola",
+    "premierstacks",
     "php-cs-fixer-config"
   ],
-  "homepage": "https://github.com/tomchochola/php-cs-fixer-config",
+  "homepage": "https://github.com/premierstacks/php-cs-fixer-config",
   "readme": "./README.md",
   "license": "proprietary",
   "authors": [
@@ -19,9 +19,9 @@
   ],
   "support": {
     "email": "chocholatom1997@gmail.com",
-    "issues": "https://github.com/tomchochola/php-cs-fixer-config/issues",
-    "source": "https://github.com/tomchochola/php-cs-fixer-config.git",
-    "docs": "https://github.com/tomchochola/php-cs-fixer-config"
+    "issues": "https://github.com/premierstacks/php-cs-fixer-config/issues",
+    "source": "https://github.com/premierstacks/php-cs-fixer-config.git",
+    "docs": "https://github.com/premierstacks/php-cs-fixer-config"
   },
   "funding": [
     {
@@ -34,12 +34,12 @@
     "friendsofphp/php-cs-fixer": "^3.51.0"
   },
   "require-dev": {
-    "tomchochola/phpstan-config": "@dev",
+    "premierstacks/phpstan-config": "@dev",
     "phpunit/phpunit": "^11.0.6"
   },
   "autoload": {
     "psr-4": {
-      "Tomchochola\\PhpCsFixerConfig\\": "./src"
+      "Premierstacks\\PhpCsFixerConfig\\": "./src"
     }
   },
   "autoload-dev": {
@@ -51,8 +51,8 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/tomchochola/phpstan-config.git"
+      "type": "git",
+      "url": "https://github.com/premierstacks/phpstan-config.git"
     }
   ],
   "config": {
