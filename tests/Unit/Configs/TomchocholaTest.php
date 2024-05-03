@@ -26,8 +26,8 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
+use Premierstacks\PhpCsFixerConfig\Configs\Tomchochola;
 use Tests\Unit\TestCase;
-use Premierstacks\PhpCsFixerConfig\Configs\Premierstacks;
 
 /**
  * @internal
