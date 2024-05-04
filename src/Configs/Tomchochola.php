@@ -11,11 +11,13 @@
  * The full license terms are detailed in the LICENSE.md file within the source code repository.
  * The terms are subject to changes. Users are encouraged to review them periodically.
  *
- * The Proprietor: Tomáš Chochola
- * - Role: The Creator, Proprietor & Project Visionary
+ * Tomáš Chochola: The Creator, Proprietor & Project Visionary
  * - Email: chocholatom1997@gmail.com
  * - GitHub: https://github.com/tomchochola
  * - Sponsor & License: https://github.com/sponsors/tomchochola
+ *
+ * Premierstacks: The Organization
+ * - GitHub: https://github.com/premierstacks
  */
 
 declare(strict_types=1);
@@ -44,8 +46,7 @@ class Tomchochola
                     The full license terms are detailed in the LICENSE.md file within the source code repository.
                     The terms are subject to changes. Users are encouraged to review them periodically.
 
-                    The Proprietor: Tomáš Chochola
-                    - Role: The Creator, Proprietor & Project Visionary
+                    Tomáš Chochola: The Creator, Proprietor & Project Visionary
                     - Email: chocholatom1997@gmail.com
                     - GitHub: https://github.com/tomchochola
                     - Sponsor & License: https://github.com/sponsors/tomchochola
