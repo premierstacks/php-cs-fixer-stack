@@ -4,7 +4,8 @@
   "type": "library",
   "keywords": [
     "premierstacks",
-    "php-cs-fixer-config"
+    "php-cs-fixer-config",
+    "tomchochola"
   ],
   "homepage": "https://github.com/premierstacks/php-cs-fixer-config",
   "readme": "./README.md",

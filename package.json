@@ -3,7 +3,8 @@
   "description": "php-cs-fixer config",
   "keywords": [
     "premierstacks",
-    "php-cs-fixer-config"
+    "php-cs-fixer-config",
+    "tomchochola"
   ],
   "homepage": "https://github.com/premierstacks/php-cs-fixer-config",
   "bugs": {
