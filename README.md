@@ -1,16 +1,16 @@
-# [PHP CS Fixer Config](https://github.com/premierstacks/php-cs-fixer-config) by [Tomáš Chochola](https://github.com/tomchochola)
+# [PHP CS Fixer Stack](https://github.com/premierstacks/php-cs-fixer-stack) by [Tomáš Chochola](https://github.com/tomchochola)
 
-Streamline PHP quality with our PHP CS Fixer Config: tailored rules and easy setup for top-tier code across your PHP projects. Ideal for swift, best-practice integration.
+Streamline PHP quality with our PHP CS Fixer Stack: tailored rules and easy setup for top-tier code across your PHP projects. Ideal for swift, best-practice integration.
 
-Dive into PHP development with confidence using our PHP CS Fixer Config. Designed to streamline your setup process, this premium suite integrates the latest coding standards, ensuring your projects reflect excellence from the outset. With our simplified configuration, you'll minimize setup time and maximize coding efficiency, enabling you to focus on building robust, high-quality PHP applications. This config is a testament to our commitment to quality, incorporating extensive research and industry best practices. Ideal for developers at any expertise level seeking a reliable, up-to-date tool for maintaining code quality and consistency.
+Dive into PHP development with confidence using our PHP CS Fixer Stack. Designed to streamline your setup process, this premium suite integrates the latest coding standards, ensuring your projects reflect excellence from the outset. With our simplified configuration, you'll minimize setup time and maximize coding efficiency, enabling you to focus on building robust, high-quality PHP applications. This config is a testament to our commitment to quality, incorporating extensive research and industry best practices. Ideal for developers at any expertise level seeking a reliable, up-to-date tool for maintaining code quality and consistency.
 
-## 👌 Top Reasons to Opt for Our Premium PHP CS Fixer Config
+## 👌 Top Reasons to Opt for Our Premium PHP CS Fixer Stack
 
-By incorporating our Premium PHP CS Fixer Config into your projects, you're not just adopting a set of rules; you're embracing a philosophy of excellence that distinguishes your work in the realm of PHP development.
+By incorporating our Premium PHP CS Fixer Stack into your projects, you're not just adopting a set of rules; you're embracing a philosophy of excellence that distinguishes your work in the realm of PHP development.
 
 ### ⏱️ Setup in Just 5 Minutes
 
-Kickstart your PHP projects with unparalleled ease. Our PHP CS Fixer Config is designed for rapid integration, enabling you to implement the latest coding standards in your project swiftly and effortlessly.
+Kickstart your PHP projects with unparalleled ease. Our PHP CS Fixer Stack is designed for rapid integration, enabling you to implement the latest coding standards in your project swiftly and effortlessly.
 
 ### 🕒 Hundreds of Hours of Research, So You Don't Have To
 
@@ -30,7 +30,7 @@ Stay ahead of the curve in the ever-evolving PHP landscape. Our configurations a
 
 ### ⚔️ Battle-Tested Reliability
 
-Depend on configurations that have been rigorously tested across a spectrum of PHP projects. From small-scale applications to large, complex systems, our PHP CS Fixer Config provides a reliable foundation for maintaining high code quality.
+Depend on configurations that have been rigorously tested across a spectrum of PHP projects. From small-scale applications to large, complex systems, our PHP CS Fixer Stack provides a reliable foundation for maintaining high code quality.
 
 ### 🏆 Premier Quality Guarantee
 
@@ -84,7 +84,7 @@ Add the following to your `composer.json`:
 "repositories": [
     {
         "type": "git",
-        "url": "https://github.com/premierstacks/php-cs-fixer-config.git"
+        "url": "https://github.com/premierstacks/php-cs-fixer-stack.git"
     }
 ]
 ```
@@ -92,7 +92,7 @@ Add the following to your `composer.json`:
 Then, execute:
 
 ```shell
-composer require --dev premierstacks/php-cs-fixer-config:@dev
+composer require --dev premierstacks/php-cs-fixer-stack:@dev
 ```
 
 ### 3️⃣ Configuration
@@ -104,8 +104,8 @@ Set up your `.php-cs-fixer.php` as follows:
 
 declare(strict_types=1);
 
-use Premierstacks\PhpCsFixerConfig\Configs\Recommended;
-use Premierstacks\PhpCsFixerConfig\Preset;
+use Premierstacks\PhpCsFixerStack\Configs\Recommended;
+use Premierstacks\PhpCsFixerStack\Preset;
 
 return Preset::make(__DIR__, Recommended::config());
 ```
