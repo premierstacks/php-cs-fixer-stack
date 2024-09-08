@@ -41,6 +41,6 @@ class RecommendedTest extends TestCase
     #[DoesNotPerformAssertions]
     public function testConfig(): void
     {
-        Recommended::config();
+        $config = Recommended::config();
     }
 }
