@@ -41,6 +41,6 @@ class PremierstacksTest extends TestCase
     #[DoesNotPerformAssertions]
     public function testConfig(): void
     {
-        Premierstacks::config();
+        $config = Premierstacks::config();
     }
 }

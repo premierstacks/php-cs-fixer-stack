@@ -41,6 +41,6 @@ class TomchocholaTest extends TestCase
     #[DoesNotPerformAssertions]
     public function testConfig(): void
     {
-        Tomchochola::config();
+        $config = Tomchochola::config();
     }
 }
