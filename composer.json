@@ -32,11 +32,11 @@
   ],
   "require": {
     "php": "^8.3",
-    "friendsofphp/php-cs-fixer": "^3.56"
+    "friendsofphp/php-cs-fixer": "^3.64"
   },
   "require-dev": {
     "premierstacks/phpstan-stack": "@dev",
-    "phpunit/phpunit": "^11.1"
+    "phpunit/phpunit": "^11.3"
   },
   "autoload": {
     "psr-4": {
