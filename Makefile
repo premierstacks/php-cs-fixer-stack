@@ -42,6 +42,9 @@ clean:
 	rm -rf ./node_modules
 	git clean -Xfd
 
+.PHONY: commit
+commit: tree fix fix fix check
+
 .PHONY: coverage
 coverage: test
 	php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html
