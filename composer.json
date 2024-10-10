@@ -3,9 +3,9 @@
   "description": "premierstacks php cs fixer stack",
   "type": "library",
   "keywords": [
+    "tomchochola",
     "premierstacks",
-    "php-cs-fixer-stack",
-    "tomchochola"
+    "php-cs-fixer-stack"
   ],
   "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
   "readme": "./README.md",
@@ -51,8 +51,8 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "path",
-      "url": "../phpstan-stack"
+      "type": "git",
+      "url": "https://github.com/premierstacks/phpstan-stack.git"
     }
   ],
   "config": {

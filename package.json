@@ -2,9 +2,9 @@
   "name": "@premierstacks/php-cs-fixer-stack",
   "description": "premierstacks php cs fixer stack",
   "keywords": [
+    "tomchochola",
     "premierstacks",
-    "php-cs-fixer-stack",
-    "tomchochola"
+    "php-cs-fixer-stack"
   ],
   "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
   "bugs": {
