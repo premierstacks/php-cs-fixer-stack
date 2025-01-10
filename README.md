@@ -93,7 +93,7 @@ Ensure this package fits your needs and that you agree with the terms.
 Setup composer repostory:
 
 ```bash
-composer config repositories.premierstacks/php-cs-fixer-stack github git@github.com:premierstacks/php-cs-fixer-stack.git
+composer config repositories.premierstacks/php-cs-fixer-stack '{"type": "vcs", "url": "https://github.com/premierstacks/php-cs-fixer-stack.git", "no-api": true}'
 ```
 
 Install using composer:
