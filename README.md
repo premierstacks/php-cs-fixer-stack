@@ -139,21 +139,21 @@ The following is a breakdown of the folder and file structure within this reposi
 
 ```bash
 .
+├── AUTHORS.md
+├── composer.json
 ├── .editorconfig
+├── eslint.config.js
 ├── .gitattributes
 ├── .gitignore
-├── .php-cs-fixer.php
-├── .prettierignore
-├── AUTHORS.md
-├── LICENSE.md
+├── LICENSE
 ├── Makefile
-├── README.md
-├── composer.json
-├── eslint.config.js
 ├── package.json
+├── .php-cs-fixer.php
 ├── phpstan.neon
 ├── phpunit.xml
 ├── prettier.config.js
+├── .prettierignore
+├── README.md
 ├── src
 │   ├── ConfigFactory.php
 │   ├── Configs
@@ -172,5 +172,5 @@ The following is a breakdown of the folder and file structure within this reposi
         ├── FinderFactoryTest.php
         └── TestCase.php
 
-6 directories, 26 files
+7 directories, 26 files
 ```
