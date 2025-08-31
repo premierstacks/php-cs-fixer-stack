@@ -14,26 +14,8 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit;
-
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
-use PHPUnit\Framework\Attributes\Small;
-use PHPUnit\Framework\Attributes\Test;
-use PhpCsFixer\Finder;
 use Premierstacks\PhpCsFixerStack\ConfigFactory;
+use Premierstacks\PhpCsFixerStack\Configs\Recommended;
+use Premierstacks\PhpCsFixerStack\FinderFactory;
 
-/**
- * @internal
- */
-#[Small]
-#[CoversClass(ConfigFactory::class)]
-class ConfigFactoryTest extends TestCase
-{
-    #[Test]
-    #[DoesNotPerformAssertions]
-    public function testMake(): void
-    {
-        ConfigFactory::make($this->createMock(Finder::class), []);
-    }
-}
+return ConfigFactory::make(FinderFactory::make()->in(__DIR__), Recommended::rules());

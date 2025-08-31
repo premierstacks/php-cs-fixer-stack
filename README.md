@@ -79,8 +79,8 @@ use Premierstacks\PhpCsFixerStack\FinderFactory;
 
 Explore the predefined templates for various configurations in the [/templates](/templates) directory. These templates provide quick-start setups for different environments.
 
-**[/templates/recommended.template](/templates/recommended.template)**<br />
-**[/templates/premierstacks.template](/templates/premierstacks.template)**<br />
+**[/templates/recommended.php](/templates/recommended.php)**<br />
+**[/templates/premierstacks.php](/templates/premierstacks.php)**<br />
 
 ## Getting Started
 
@@ -109,9 +109,9 @@ Choose one of the predefined configuration templates from the [/templates](/temp
 Use the `cp` command to copy it into your project as `/.php-cs-fixer.php`:
 
 ```bash
-cp ./vendor/premierstacks/php-cs-fixer-stack/templates/recommended.template .php-cs-fixer.php
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/recommended.php .php-cs-fixer.php
 # or for premierstacks internal use
-cp ./vendor/premierstacks/php-cs-fixer-stack/templates/premierstacks.template .php-cs-fixer.php
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/premierstacks.php .php-cs-fixer.php
 ```
 
 **4. CLI**
@@ -132,45 +132,3 @@ Execute commands:
 **👨 GitHub Personal: [https://github.com/tomchochola](https://github.com/tomchochola)**<br />
 **🏢 GitHub Organization: [https://github.com/premierstacks](https://github.com/premierstacks)**<br />
 **💰 GitHub Sponsors: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)**<br />
-
-## Tree
-
-The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.
-
-```bash
-.
-├── AUTHORS.md
-├── composer.json
-├── .editorconfig
-├── eslint.config.js
-├── .gitattributes
-├── .gitignore
-├── LICENSE
-├── Makefile
-├── package.json
-├── .php-cs-fixer.php
-├── phpstan.neon
-├── phpunit.xml
-├── prettier.config.js
-├── .prettierignore
-├── README.md
-├── src
-│   ├── ConfigFactory.php
-│   ├── Configs
-│   │   ├── Premierstacks.php
-│   │   └── Recommended.php
-│   └── FinderFactory.php
-├── templates
-│   ├── premierstacks.template
-│   └── recommended.template
-└── tests
-    └── Unit
-        ├── ConfigFactoryTest.php
-        ├── Configs
-        │   ├── PremierstacksTest.php
-        │   └── RecommendedTest.php
-        ├── FinderFactoryTest.php
-        └── TestCase.php
-
-7 directories, 26 files
-```
