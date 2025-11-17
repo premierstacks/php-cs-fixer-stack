@@ -15,7 +15,10 @@
 declare(strict_types=1);
 
 use Premierstacks\PhpCsFixerStack\ConfigFactory;
-use Premierstacks\PhpCsFixerStack\Configs\Recommended;
 use Premierstacks\PhpCsFixerStack\FinderFactory;
+use Premierstacks\PhpCsFixerStack\PHP83;
 
-return ConfigFactory::make(FinderFactory::make()->in(__DIR__), Recommended::rules());
+return ConfigFactory::make(FinderFactory::make()->in(__DIR__), [
+    ...PHP83::recommended(new DateTimeImmutable()),
+    ...PHP83::project(new DateTimeImmutable()),
+]);

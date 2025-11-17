@@ -14,17 +14,63 @@
 
 declare(strict_types=1);
 
-namespace Premierstacks\PhpCsFixerStack\Configs;
+namespace Premierstacks\PhpCsFixerStack;
+
+use DateTimeImmutable;
 
 /**
  * @no-named-arguments
  */
-class Recommended
+class PHP83
 {
     /**
      * @return array<string, array<string, mixed>|bool>
      */
-    public static function rules(): array
+    public static function library(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
+    {
+        return [
+            'phpdoc_tag_no_named_arguments' => true,
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>|bool>
+     */
+    public static function premierstacks(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
+    {
+        return [
+            'header_comment' => [
+                'comment_type' => 'PHPDoc',
+                'location' => 'after_open',
+                'header' => <<<'EOF'
+                    @author Tomáš Chochola <chocholatom1997@gmail.com>
+                    @copyright © 2025 Tomáš Chochola <chocholatom1997@gmail.com>
+
+                    @license CC-BY-ND-4.0
+
+                    @see {@link https://creativecommons.org/licenses/by-nd/4.0/} License
+                    @see {@link https://github.com/tomchochola} GitHub Personal
+                    @see {@link https://github.com/premierstacks} GitHub Organization
+                    @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
+                    EOF,
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>|bool>
+     */
+    public static function project(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
+    {
+        return [
+            'final_class' => true,
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>|bool>
+     */
+    public static function recommended(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
     {
         return [
             'array_push' => true,
@@ -61,6 +107,8 @@ class Recommended
             ],
             'yield_from_array_to_yields' => true,
             'attribute_empty_parentheses' => true,
+            'general_attribute_remove' => false,
+            'ordered_attributes' => true,
             'braces_position' => true,
             'encoding' => true,
             'no_multiple_statements_per_line' => true,
@@ -99,6 +147,9 @@ class Recommended
             'class_definition' => [
                 'single_line' => true,
             ],
+            'final_class' => false,
+            'final_internal_class' => true,
+            'final_public_method_for_abstract_class' => true,
             'modifier_keywords' => true,
             'no_blank_lines_after_class_opening' => true,
             'no_null_property_initialization' => true,
@@ -156,8 +207,10 @@ class Recommended
             'self_static_accessor' => true,
             'single_class_element_per_statement' => true,
             'single_trait_insert_per_statement' => true,
+            'static_private_method' => true,
             'date_time_immutable' => true,
             'comment_to_phpdoc' => true,
+            'header_comment' => false,
             'multiline_comment_opening_closing' => true,
             'no_empty_comment' => true,
             'no_trailing_whitespace_in_comment' => true,
@@ -233,6 +286,7 @@ class Recommended
             ],
             'no_spaces_after_function_name' => true,
             'no_unreachable_default_argument_value' => true,
+            'no_useless_printf' => true,
             'no_useless_sprintf' => true,
             'nullable_type_declaration_for_default_null_value' => true,
             'regular_callable_call' => true,
@@ -242,13 +296,14 @@ class Recommended
             'void_return' => true,
             'fully_qualified_strict_types' => [
                 'import_symbols' => true,
-                'leading_backslash_in_global_namespace' => true,
+                'leading_backslash_in_global_namespace' => false,
             ],
             'global_namespace_import' => [
-                'import_classes' => false,
-                'import_constants' => false,
-                'import_functions' => false,
+                'import_classes' => true,
+                'import_constants' => true,
+                'import_functions' => true,
             ],
+            'group_import' => false,
             'no_leading_import_slash' => true,
             'no_unneeded_import_alias' => true,
             'no_unused_imports' => true,
@@ -294,14 +349,17 @@ class Recommended
             'increment_style' => true,
             'logical_operators' => true,
             'long_to_shorthand_operator' => true,
-            'new_with_parentheses' => [
-                'anonymous_class' => false,
+            'new_expression_parentheses' => [
+                'use_parentheses' => true,
             ],
+            'new_with_parentheses' => true,
             'no_space_around_double_colon' => true,
             'no_useless_concat_operator' => [
                 'juggle_simple_strings' => true,
             ],
             'no_useless_nullsafe_operator' => true,
+            'not_operator_with_space' => false,
+            'not_operator_with_successor_space' => false,
             'object_operator_without_whitespace' => true,
             'operator_linebreak' => true,
             'standardize_increment' => true,
@@ -317,7 +375,10 @@ class Recommended
             'full_opening_tag' => true,
             'linebreak_after_opening_tag' => true,
             'no_closing_tag' => true,
+            'php_unit_assert_new_names' => true,
+            'php_unit_attributes' => true,
             'php_unit_construct' => true,
+            'php_unit_data_provider_method_order' => true,
             'php_unit_data_provider_name' => true,
             'php_unit_data_provider_return_type' => true,
             'php_unit_data_provider_static' => [
@@ -326,6 +387,7 @@ class Recommended
             'php_unit_dedicate_assert' => true,
             'php_unit_dedicate_assert_internal_type' => true,
             'php_unit_expectation' => true,
+            'php_unit_fqcn_annotation' => false,
             'php_unit_internal_class' => [
                 'types' => [
                     'abstract',
@@ -333,16 +395,17 @@ class Recommended
                     'normal',
                 ],
             ],
-            'php_unit_fqcn_annotation' => true,
             'php_unit_method_casing' => true,
             'php_unit_mock' => true,
             'php_unit_mock_short_will_return' => true,
             'php_unit_namespaced' => true,
             'php_unit_no_expectation_annotation' => true,
             'php_unit_set_up_tear_down_visibility' => true,
+            'php_unit_size_class' => true,
             'php_unit_strict' => true,
             'php_unit_test_annotation' => true,
             'php_unit_test_case_static_method_calls' => true,
+            'php_unit_test_class_requires_covers' => true,
             'align_multiline_comment' => [
                 'comment_type' => 'phpdocs_like',
             ],
@@ -391,6 +454,7 @@ class Recommended
             'no_superfluous_phpdoc_tags' => [
                 'remove_inheritdoc' => true,
             ],
+            'phpdoc_add_missing_param_annotation' => false,
             'phpdoc_align' => [
                 'align' => 'left',
                 'tags' => [
@@ -433,6 +497,9 @@ class Recommended
             'phpdoc_no_empty_return' => true,
             'phpdoc_no_package' => true,
             'phpdoc_no_useless_inheritdoc' => true,
+            'phpdoc_order_by_value' => [
+                'annotations' => ['author', 'covers', 'coversNothing', 'dataProvider', 'depends', 'group', 'internal', 'method', 'mixin', 'property', 'property-read', 'property-write', 'requires', 'throws', 'uses'],
+            ],
             'phpdoc_order' => [
                 'order' => [
                     'template',
@@ -443,25 +510,6 @@ class Recommended
                     'psalm-assert',
                 ],
             ],
-            'phpdoc_order_by_value' => [
-                'annotations' => [
-                    'author',
-                    'covers',
-                    'coversNothing',
-                    'dataProvider',
-                    'depends',
-                    'group',
-                    'internal',
-                    'method',
-                    'mixin',
-                    'property',
-                    'property-read',
-                    'property-write',
-                    'requires',
-                    'throws',
-                    'uses',
-                ],
-            ],
             'phpdoc_param_order' => true,
             'phpdoc_return_self_reference' => true,
             'phpdoc_scalar' => true,
@@ -469,6 +517,7 @@ class Recommended
             'phpdoc_single_line_var_spacing' => true,
             'phpdoc_summary' => true,
             'phpdoc_tag_casing' => true,
+            'phpdoc_tag_no_named_arguments' => false,
             'phpdoc_tag_type' => [
                 'tags' => [
                     'inheritDoc' => 'inline',
@@ -477,8 +526,8 @@ class Recommended
             'phpdoc_to_comment' => [
                 'allow_before_return_statement' => true,
             ],
-            'phpdoc_trim' => true,
             'phpdoc_trim_consecutive_blank_line_separation' => true,
+            'phpdoc_trim' => true,
             'phpdoc_types' => true,
             'phpdoc_types_order' => [
                 'case_sensitive' => true,
@@ -550,22 +599,7 @@ class Recommended
             'line_ending' => true,
             'method_chaining_indentation' => true,
             'no_extra_blank_lines' => [
-                'tokens' => [
-                    'attribute',
-                    'break',
-                    'case',
-                    'continue',
-                    'curly_brace_block',
-                    'default',
-                    'extra',
-                    'parenthesis_brace_block',
-                    'return',
-                    'square_brace_block',
-                    'switch',
-                    'throw',
-                    'use',
-                    'use_trait',
-                ],
+                'tokens' => ['attribute', 'break', 'case', 'comma', 'continue', 'curly_brace_block', 'default', 'extra', 'parenthesis_brace_block', 'return', 'square_brace_block', 'switch', 'throw', 'use', 'use_trait'],
             ],
             'no_spaces_around_offset' => true,
             'no_trailing_whitespace' => true,

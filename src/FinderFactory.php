@@ -18,6 +18,9 @@ namespace Premierstacks\PhpCsFixerStack;
 
 use PhpCsFixer\Finder;
 
+/**
+ * @no-named-arguments
+ */
 class FinderFactory
 {
     public static function make(): Finder

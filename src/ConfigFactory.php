@@ -20,6 +20,9 @@ use PhpCsFixer\Config;
 use PhpCsFixer\ConfigInterface;
 use PhpCsFixer\Finder;
 
+/**
+ * @no-named-arguments
+ */
 class ConfigFactory
 {
     /**

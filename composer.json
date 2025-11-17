@@ -34,10 +34,12 @@
     }
   ],
   "require": {
-    "friendsofphp/php-cs-fixer": "^3.86.0"
+    "php": "^8.3.0",
+    "friendsofphp/php-cs-fixer": "^3.89.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "^12.3.7",
+    "phpunit/phpunit": "^12.4.3",
+    "roave/security-advisories": "@dev",
     "premierstacks/phpstan-stack": "@dev"
   },
   "autoload": {
@@ -60,26 +62,35 @@
     }
   ],
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "phpstan/extension-installer": true
     },
     "audit": {
       "abandoned": "fail"
     },
-    "platform-check": true
+    "platform": {
+      "php": "8.3.0"
+    },
+    "platform-check": true,
+    "process-timeout": 0
   },
   "scripts": {
     "composer:audit": "@composer audit",
     "composer:install": "@composer install",
     "composer:platform": "@composer check-platform-reqs",
-    "composer:update": "@composer update",
+    "composer:update": "@composer update --with-all-dependencies",
     "composer:validate": "@composer validate --strict --no-check-all",
     "dump:development": "@composer dump-autoload -o --dev --strict-psr",
     "dump:production": "@composer dump-autoload -a --no-dev --strict-psr",
-    "fix:php-cs-fixer": "php-cs-fixer fix",
-    "lint:php-cs-fixer": "php-cs-fixer fix --dry-run --diff",
-    "stan:phpstan": "phpstan analyse",
-    "test:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
-    "test:phpunit": "phpunit"
+    "fix:php-cs-fixer": "@php php-cs-fixer fix",
+    "lint:php-cs-fixer": "@php php-cs-fixer check",
+    "stan:phpstan": "@php phpstan analyse",
+    "start:development": "exit 1",
+    "start:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
+    "test:phpunit": "@php phpunit",
+    "post-install-cmd": "@cache:clear",
+    "post-update-cmd": "@cache:clear",
+    "cache:clear": "@php -r 'apcu_clear_cache();'"
   }
 }

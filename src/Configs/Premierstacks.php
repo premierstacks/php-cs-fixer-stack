@@ -16,6 +16,11 @@ declare(strict_types=1);
 
 namespace Premierstacks\PhpCsFixerStack\Configs;
 
+use function array_replace;
+
+/**
+ * @no-named-arguments
+ */
 class Premierstacks
 {
     /**
@@ -23,7 +28,7 @@ class Premierstacks
      */
     public static function rules(): array
     {
-        return \array_replace(Recommended::rules(), [
+        return array_replace(Recommended::rules(), [
             'header_comment' => [
                 'comment_type' => 'PHPDoc',
                 'location' => 'after_open',

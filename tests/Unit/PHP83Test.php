@@ -16,25 +16,42 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use DateTimeImmutable;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
-use Premierstacks\PhpCsFixerStack\FinderFactory;
+use Premierstacks\PhpCsFixerStack\PHP83;
 
 /**
  * @internal
  *
  * @no-named-arguments
  */
-#[CoversClass(FinderFactory::class)]
+#[CoversClass(PHP83::class)]
 #[Small]
-final class FinderFactoryTest extends TestCase
+final class PHP83Test extends TestCase
 {
-    #[DoesNotPerformAssertions]
     #[Test]
-    public function testMake(): void
+    public function testLibrary(): void
     {
-        FinderFactory::make();
+        self::assertNotEmpty(PHP83::library(new DateTimeImmutable()));
+    }
+
+    #[Test]
+    public function testPremierstacks(): void
+    {
+        self::assertNotEmpty(PHP83::premierstacks(new DateTimeImmutable()));
+    }
+
+    #[Test]
+    public function testProject(): void
+    {
+        self::assertNotEmpty(PHP83::project(new DateTimeImmutable()));
+    }
+
+    #[Test]
+    public function testRecommended(): void
+    {
+        self::assertNotEmpty(PHP83::recommended(new DateTimeImmutable()));
     }
 }

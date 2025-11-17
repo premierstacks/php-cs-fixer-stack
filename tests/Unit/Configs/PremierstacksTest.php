@@ -25,13 +25,15 @@ use Tests\Unit\TestCase;
 
 /**
  * @internal
+ *
+ * @no-named-arguments
  */
-#[Small]
 #[CoversClass(Premierstacks::class)]
-class PremierstacksTest extends TestCase
+#[Small]
+final class PremierstacksTest extends TestCase
 {
-    #[Test]
     #[DoesNotPerformAssertions]
+    #[Test]
     public function testRules(): void
     {
         $rules = Premierstacks::rules();

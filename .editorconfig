@@ -17,3 +17,6 @@ indent_style = tab
 
 [*.php]
 indent_size = 4
+
+[*.php.dist]
+indent_size = 4

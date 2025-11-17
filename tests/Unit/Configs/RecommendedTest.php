@@ -25,13 +25,15 @@ use Tests\Unit\TestCase;
 
 /**
  * @internal
+ *
+ * @no-named-arguments
  */
-#[Small]
 #[CoversClass(Recommended::class)]
-class RecommendedTest extends TestCase
+#[Small]
+final class RecommendedTest extends TestCase
 {
-    #[Test]
     #[DoesNotPerformAssertions]
+    #[Test]
     public function testRules(): void
     {
         $rules = Recommended::rules();

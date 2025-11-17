@@ -9,10 +9,8 @@
   defaultTimeLimit="1"
   enforceTimeLimit="true"
   executionOrder="depends,defects"
-  failOnDeprecation="true"
-  failOnNotice="true"
-  failOnRisky="true"
-  failOnWarning="true"
+  displayDetailsOnAllIssues="true"
+  failOnAllIssues="true"
   requireCoverageMetadata="true"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
@@ -28,7 +26,7 @@
     </include>
   </source>
   <php>
-    <env name="APP_ENV" value="testing" />
+    <env name="APP_ENV" value="ci" />
     <env name="PHPUNIT_TESTSUITE" value="true" />
   </php>
   <coverage>

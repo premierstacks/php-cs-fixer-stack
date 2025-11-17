@@ -25,13 +25,15 @@ use Premierstacks\PhpCsFixerStack\ConfigFactory;
 
 /**
  * @internal
+ *
+ * @no-named-arguments
  */
-#[Small]
 #[CoversClass(ConfigFactory::class)]
-class ConfigFactoryTest extends TestCase
+#[Small]
+final class ConfigFactoryTest extends TestCase
 {
-    #[Test]
     #[DoesNotPerformAssertions]
+    #[Test]
     public function testMake(): void
     {
         ConfigFactory::make($this->createMock(Finder::class), []);

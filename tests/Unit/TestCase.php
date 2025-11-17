@@ -20,5 +20,7 @@ use PHPUnit\Framework\TestCase as VendorTestCase;
 
 /**
  * @internal
+ *
+ * @no-named-arguments
  */
 abstract class TestCase extends VendorTestCase {}
