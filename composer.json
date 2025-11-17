@@ -70,7 +70,7 @@
       "abandoned": "fail"
     },
     "platform": {
-      "php": "8.3.0"
+      "php": "8.4.13"
     },
     "platform-check": true,
     "process-timeout": 0
@@ -86,11 +86,11 @@
     "fix:php-cs-fixer": "@php php-cs-fixer fix",
     "lint:php-cs-fixer": "@php php-cs-fixer check",
     "stan:phpstan": "@php phpstan analyse",
-    "start:development": "exit 1",
+    "start:development": "",
     "start:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
     "test:phpunit": "@php phpunit",
     "post-install-cmd": "@cache:clear",
     "post-update-cmd": "@cache:clear",
-    "cache:clear": "@php -r 'apcu_clear_cache();'"
+    "cache:clear": ""
   }
 }
