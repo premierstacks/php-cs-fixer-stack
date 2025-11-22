@@ -246,7 +246,7 @@ class PHP83
                 ],
             ],
             'no_useless_else' => true,
-            'simplified_if_return' => true,
+            'simplified_if_return' => false,
             'switch_case_semicolon_to_colon' => true,
             'switch_case_space' => true,
             'switch_continue_to_break' => true,
