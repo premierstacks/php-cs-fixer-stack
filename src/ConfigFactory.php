@@ -31,6 +31,7 @@ class ConfigFactory
     public static function make(Finder $finder, array $rules): ConfigInterface
     {
         return (new Config())
+            ->setUnsupportedPhpVersionAllowed(true)
             ->setRiskyAllowed(true)
             ->setLineEnding("\n")
             ->setFinder($finder)
