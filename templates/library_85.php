@@ -16,10 +16,9 @@ declare(strict_types=1);
 
 use Premierstacks\PhpCsFixerStack\ConfigFactory;
 use Premierstacks\PhpCsFixerStack\FinderFactory;
-use Premierstacks\PhpCsFixerStack\PHP83;
+use Premierstacks\PhpCsFixerStack\PHP85;
 
 return ConfigFactory::make(FinderFactory::make()->in(__DIR__), [
-    ...PHP83::recommended(new DateTimeImmutable()),
-    ...PHP83::library(new DateTimeImmutable()),
-    ...PHP83::premierstacks(new DateTimeImmutable()),
+    ...PHP85::recommended(new DateTimeImmutable()),
+    ...PHP85::library(new DateTimeImmutable()),
 ]);

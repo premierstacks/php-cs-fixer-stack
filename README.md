@@ -73,14 +73,21 @@ use Premierstacks\PhpCsFixerStack\ConfigFactory;
 use Premierstacks\PhpCsFixerStack\Configs\Premierstacks;
 use Premierstacks\PhpCsFixerStack\Configs\Recommended;
 use Premierstacks\PhpCsFixerStack\FinderFactory;
+use Premierstacks\PhpCsFixerStack\PHP83;
+use Premierstacks\PhpCsFixerStack\PHP84;
+use Premierstacks\PhpCsFixerStack\PHP85;
 ```
 
 ## Templates
 
 Explore the predefined templates for various configurations in the [/templates](/templates) directory. These templates provide quick-start setups for different environments.
 
-**[/templates/recommended.php](/templates/recommended.php)**<br />
-**[/templates/premierstacks.php](/templates/premierstacks.php)**<br />
+**[/templates/project_83.php](/templates/project_83.php)**<br />
+**[/templates/project_84.php](/templates/project_84.php)**<br />
+**[/templates/project_85.php](/templates/project_85.php)**<br />
+**[/templates/library_83.php](/templates/library_83.php)**<br />
+**[/templates/library_84.php](/templates/library_84.php)**<br />
+**[/templates/library_85.php](/templates/library_85.php)**
 
 ## Getting Started
 
@@ -109,9 +116,17 @@ Choose one of the predefined configuration templates from the [/templates](/temp
 Use the `cp` command to copy it into your project as `/.php-cs-fixer.php`:
 
 ```bash
-cp ./vendor/premierstacks/php-cs-fixer-stack/templates/recommended.php .php-cs-fixer.php
-# or for premierstacks internal use
-cp ./vendor/premierstacks/php-cs-fixer-stack/templates/premierstacks.php .php-cs-fixer.php
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/project_83.php .php-cs-fixer.php
+# or
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/project_84.php .php-cs-fixer.php
+# or
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/project_85.php .php-cs-fixer.php
+# or
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/library_83.php .php-cs-fixer.php
+# or
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/library_84.php .php-cs-fixer.php
+# or
+cp ./vendor/premierstacks/php-cs-fixer-stack/templates/library_85.php .php-cs-fixer.php
 ```
 
 **4. CLI**

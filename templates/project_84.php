@@ -20,6 +20,5 @@ use Premierstacks\PhpCsFixerStack\PHP84;
 
 return ConfigFactory::make(FinderFactory::make()->in(__DIR__), [
     ...PHP84::recommended(new DateTimeImmutable()),
-    ...PHP84::library(new DateTimeImmutable()),
-    ...PHP84::premierstacks(new DateTimeImmutable()),
+    ...PHP84::project(new DateTimeImmutable()),
 ]);
