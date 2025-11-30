@@ -38,6 +38,12 @@ final class PHP84Test extends TestCase
     }
 
     #[Test]
+    public function testPremierstack(): void
+    {
+        self::assertNotEmpty(PHP84::premierstack(new DateTimeImmutable()));
+    }
+
+    #[Test]
     public function testPremierstacks(): void
     {
         self::assertNotEmpty(PHP84::premierstacks(new DateTimeImmutable()));
@@ -53,5 +59,11 @@ final class PHP84Test extends TestCase
     public function testRecommended(): void
     {
         self::assertNotEmpty(PHP84::recommended(new DateTimeImmutable()));
+    }
+
+    #[Test]
+    public function testTomaschochola(): void
+    {
+        self::assertNotEmpty(PHP84::tomaschochola(new DateTimeImmutable()));
     }
 }

@@ -36,6 +36,30 @@ class PHP83
     /**
      * @return array<string, array<string, mixed>|bool>
      */
+    public static function premierstack(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
+    {
+        return [
+            'header_comment' => [
+                'comment_type' => 'PHPDoc',
+                'location' => 'after_open',
+                'header' => <<<'EOF'
+                    @author Tomáš Chochola <tomaschochola@seznam.cz>
+                    @copyright © 2025 Tomáš Chochola <tomaschochola@seznam.cz>
+
+                    @license CC-BY-ND-4.0
+
+                    @see {@link https://creativecommons.org/licenses/by-nd/4.0/} License
+                    @see {@link https://github.com/tomchochola} GitHub Profile
+                    @see {@link https://github.com/premierstack} GitHub Organization
+                    @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
+                    EOF,
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>|bool>
+     */
     public static function premierstacks(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
     {
         return [
@@ -643,6 +667,30 @@ class PHP83
             ],
             'type_declaration_spaces' => true,
             'types_spaces' => true,
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>|bool>
+     */
+    public static function tomaschochola(DateTimeImmutable $version = new DateTimeImmutable('2025-11-17')): array
+    {
+        return [
+            'header_comment' => [
+                'comment_type' => 'PHPDoc',
+                'location' => 'after_open',
+                'header' => <<<'EOF'
+                    @author Tomáš Chochola <tomaschochola@seznam.cz>
+                    @copyright © 2025 Tomáš Chochola <tomaschochola@seznam.cz>
+
+                    @license CC-BY-ND-4.0
+
+                    @see {@link https://creativecommons.org/licenses/by-nd/4.0/} License
+                    @see {@link https://github.com/tomchochola} GitHub Profile
+                    @see {@link https://github.com/premierstack} GitHub Organization
+                    @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
+                    EOF,
+            ],
         ];
     }
 }

@@ -18,7 +18,7 @@ use Premierstacks\PhpCsFixerStack\ConfigFactory;
 use Premierstacks\PhpCsFixerStack\FinderFactory;
 use Premierstacks\PhpCsFixerStack\PHP84;
 
-return ConfigFactory::make(FinderFactory::make()->in(__DIR__), [
-    ...PHP84::recommended(new DateTimeImmutable()),
-    ...PHP84::library(new DateTimeImmutable()),
-]);
+return ConfigFactory::make(FinderFactory::make()->in(__DIR__), \array_replace(
+    PHP84::recommended(new DateTimeImmutable()),
+    PHP84::library(new DateTimeImmutable()),
+));

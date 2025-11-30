@@ -1,47 +1,12 @@
 {
-  "name": "premierstacks/php-cs-fixer-stack",
-  "description": "premierstacks php cs fixer stack",
-  "type": "library",
-  "keywords": [
-    "tomchochola",
-    "tomaschochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "premierstacks",
-    "php-cs-fixer-stack"
-  ],
-  "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
-  "readme": "./README.md",
-  "license": "CC-BY-ND-4.0",
   "authors": [
     {
-      "name": "Tomáš Chochola",
       "email": "chocholatom1997@gmail.com",
       "homepage": "https://github.com/tomchochola",
+      "name": "Tomáš Chochola",
       "role": "Author"
     }
   ],
-  "support": {
-    "email": "chocholatom1997@gmail.com",
-    "issues": "https://github.com/premierstacks/php-cs-fixer-stack/issues",
-    "source": "https://github.com/premierstacks/php-cs-fixer-stack.git",
-    "docs": "https://github.com/premierstacks/php-cs-fixer-stack"
-  },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/tomchochola"
-    }
-  ],
-  "require": {
-    "php": "^8.3.0",
-    "friendsofphp/php-cs-fixer": "^3.89.2"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^12.4.3",
-    "roave/security-advisories": "@dev",
-    "premierstacks/phpstan-stack": "@dev"
-  },
   "autoload": {
     "psr-4": {
       "Premierstacks\\PhpCsFixerStack\\": "./src"
@@ -52,17 +17,7 @@
       "Tests\\": "./tests"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/premierstacks/phpstan-stack.git",
-      "no-api": true
-    }
-  ],
   "config": {
-    "sort-packages": true,
     "allow-plugins": {
       "phpstan/extension-installer": true
     },
@@ -73,9 +28,48 @@
       "php": "8.4.13"
     },
     "platform-check": true,
-    "process-timeout": 0
+    "process-timeout": 0,
+    "sort-packages": true
+  },
+  "description": "premierstacks php cs fixer stack",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tomchochola"
+    }
+  ],
+  "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
+  "keywords": [
+    "tomchochola",
+    "tomaschochola",
+    "Tomas Chochola",
+    "Tomáš Chochola",
+    "premierstacks",
+    "php-cs-fixer-stack"
+  ],
+  "license": "CC-BY-ND-4.0",
+  "minimum-stability": "dev",
+  "name": "premierstacks/php-cs-fixer-stack",
+  "prefer-stable": true,
+  "readme": "./README.md",
+  "repositories": [
+    {
+      "no-api": true,
+      "type": "vcs",
+      "url": "https://github.com/premierstacks/phpstan-stack.git"
+    }
+  ],
+  "require": {
+    "friendsofphp/php-cs-fixer": "^3.89.2",
+    "php": "^8.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.4.3",
+    "premierstacks/phpstan-stack": "@dev",
+    "roave/security-advisories": "@dev"
   },
   "scripts": {
+    "cache:clear": "",
     "composer:audit": "@composer audit",
     "composer:install": "@composer install",
     "composer:platform": "@composer check-platform-reqs",
@@ -85,12 +79,18 @@
     "dump:production": "@composer dump-autoload -a --no-dev --strict-psr",
     "fix:php-cs-fixer": "@php php-cs-fixer fix",
     "lint:php-cs-fixer": "@php php-cs-fixer check",
-    "stan:phpstan": "@php phpstan analyse",
-    "start:development": "",
-    "start:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
-    "test:phpunit": "@php phpunit",
     "post-install-cmd": "@cache:clear",
     "post-update-cmd": "@cache:clear",
-    "cache:clear": ""
-  }
+    "stan:phpstan": "@php phpstan analyse",
+    "start:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
+    "start:development": "",
+    "test:phpunit": "@php phpunit"
+  },
+  "support": {
+    "docs": "https://github.com/premierstacks/php-cs-fixer-stack",
+    "email": "chocholatom1997@gmail.com",
+    "issues": "https://github.com/premierstacks/php-cs-fixer-stack/issues",
+    "source": "https://github.com/premierstacks/php-cs-fixer-stack.git"
+  },
+  "type": "library"
 }

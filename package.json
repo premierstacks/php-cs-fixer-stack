@@ -1,6 +1,30 @@
 {
-  "name": "@premierstacks/php-cs-fixer-stack",
+  "author": {
+    "email": "chocholatom1997@gmail.com",
+    "name": "Tomáš Chochola",
+    "url": "https://github.com/tomchochola"
+  },
+  "bugs": {
+    "email": "chocholatom1997@gmail.com",
+    "url": "https://github.com/premierstacks/php-cs-fixer-stack/issues"
+  },
+  "contributors": [
+    {
+      "email": "chocholatom1997@gmail.com",
+      "name": "Tomáš Chochola",
+      "url": "https://github.com/tomchochola"
+    }
+  ],
   "description": "premierstacks php cs fixer stack",
+  "devDependencies": {
+    "@premierstacks/eslint-stack": "github:premierstacks/eslint-stack#main",
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack#main"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tomchochola"
+  },
+  "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
   "keywords": [
     "tomchochola",
     "tomaschochola",
@@ -10,34 +34,9 @@
     "Premierstacks",
     "php-cs-fixer-stack"
   ],
-  "homepage": "https://github.com/premierstacks/php-cs-fixer-stack",
-  "bugs": {
-    "email": "chocholatom1997@gmail.com",
-    "url": "https://github.com/premierstacks/php-cs-fixer-stack/issues"
-  },
   "license": "CC-BY-ND-4.0",
-  "author": {
-    "email": "chocholatom1997@gmail.com",
-    "name": "Tomáš Chochola",
-    "url": "https://github.com/tomchochola"
-  },
-  "contributors": [
-    {
-      "email": "chocholatom1997@gmail.com",
-      "name": "Tomáš Chochola",
-      "url": "https://github.com/tomchochola"
-    }
-  ],
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/tomchochola"
-  },
+  "name": "@premierstacks/php-cs-fixer-stack",
   "repository": "github:premierstacks/php-cs-fixer-stack",
-  "devDependencies": {
-    "@premierstacks/eslint-stack": "github:premierstacks/eslint-stack#main",
-    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack#main"
-  },
-  "type": "module",
   "scripts": {
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
@@ -46,5 +45,6 @@
     "npm:audit": "\"$npm_node_execpath\" \"$npm_execpath\" audit --audit-level info --include prod --include dev --include peer --include optional",
     "npm:install": "\"$npm_node_execpath\" \"$npm_execpath\" install --install-links --include prod --include dev --include peer --include optional --ignore-scripts",
     "npm:update": "\"$npm_node_execpath\" \"$npm_execpath\" update --install-links --include prod --include dev --include peer --include optional --ignore-scripts"
-  }
+  },
+  "type": "module"
 }
